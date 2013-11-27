@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# Copyright (c) 2013 tigo
+# license: MIT
+
+# cube is a cross-platform web browser
+
+# standalone gecko web view
+# mozilla runtime - xulrunner
+
+# this script run xul app
+
+platform=LINUX_86
+
+if [ "$platform" == "LINUX_86" ]; then 
+	../lib/xulrunner-25.0.en-US.linux-i686/xulrunner/xulrunner src/main/moz/cube/application.ini -jsconsole
+fi
+
+return=$?
+
+echo $return
+exit $return
